@@ -1,0 +1,119 @@
+
+----- step size score  variance ------ 
+
+python3 ImageNetStepSizeScoreVarianceTest.py --test_type RISE --model VIT32 --image_count 1000 --dataset_path <path-to-imagenet-2012-validation> --cuda_num 0
+python3 ImageNetStepSizeScoreVarianceTest.py --test_type POS_NEG_PERT --model VIT32 --image_count 1000 --dataset_path <path-to-imagenet-2012-validation> --cuda_num 0
+python3 ImageNetStepSizeScoreVarianceTest.py --test_type MONO --model VIT32 --image_count 1000 --dataset_path <path-to-imagenet-2012-validation> --cuda_num 0
+python3 ImageNetStepSizeScoreVarianceTest.py --test_type AIC --model VIT32 --image_count 1000 --dataset_path <path-to-imagenet-2012-validation> --cuda_num 0
+python3 ImageNetStepSizeScoreVarianceTest.py --test_type DF --model VIT32 --image_count 1000 --dataset_path <path-to-imagenet-2012-validation> --cuda_num 0
+
+python3 ImageNetStepSizeScoreVarianceTest.py --test_type RISE --model VIT16 --image_count 1000 --dataset_path <path-to-imagenet-2012-validation> --cuda_num 0
+python3 ImageNetStepSizeScoreVarianceTest.py --test_type POS_NEG_PERT --model VIT16 --image_count 1000 --dataset_path <path-to-imagenet-2012-validation> --cuda_num 0
+python3 ImageNetStepSizeScoreVarianceTest.py --test_type MONO --model VIT16 --image_count 1000 --dataset_path <path-to-imagenet-2012-validation> --cuda_num 0
+python3 ImageNetStepSizeScoreVarianceTest.py --test_type AIC --model VIT16 --image_count 1000 --dataset_path <path-to-imagenet-2012-validation> --cuda_num 0
+python3 ImageNetStepSizeScoreVarianceTest.py --test_type DF --model VIT16 --image_count 1000 --dataset_path <path-to-imagenet-2012-validation> --cuda_num 0
+
+----- baseline score variance ------
+
+python3 ImageNetBaselineScoreVarianceTest.py --test_type RISE --model VIT32 --image_count 1000 --dataset_path <path-to-imagenet-2012-validation> --cuda_num 0
+python3 ImageNetBaselineScoreVarianceTest.py --test_type POS_NEG_PERT --model VIT32 --image_count 1000 --dataset_path <path-to-imagenet-2012-validation> --cuda_num 0
+python3 ImageNetBaselineScoreVarianceTest.py --test_type MONO --model VIT32 --image_count 1000 --dataset_path <path-to-imagenet-2012-validation> --cuda_num 0
+python3 ImageNetBaselineScoreVarianceTest.py --test_type AIC --model VIT32 --image_count 1000 --dataset_path <path-to-imagenet-2012-validation> --cuda_num 0
+python3 ImageNetBaselineScoreVarianceTest.py --test_type DF --model VIT32 --image_count 1000 --dataset_path <path-to-imagenet-2012-validation> --cuda_num 0
+
+python3 ImageNetBaselineScoreVarianceTest.py --test_type RISE --model VIT16 --image_count 1000 --dataset_path <path-to-imagenet-2012-validation> --cuda_num 0
+python3 ImageNetBaselineScoreVarianceTest.py --test_type POS_NEG_PERT --model VIT16 --image_count 1000 --dataset_path <path-to-imagenet-2012-validation> --cuda_num 0
+python3 ImageNetBaselineScoreVarianceTest.py --test_type MONO --model VIT16 --image_count 1000 --dataset_path <path-to-imagenet-2012-validation> --cuda_num 0
+python3 ImageNetBaselineScoreVarianceTest.py --test_type AIC --model VIT16 --image_count 1000 --dataset_path <path-to-imagenet-2012-validation> --cuda_num 0
+python3 ImageNetBaselineScoreVarianceTest.py --test_type DF --model VIT16 --image_count 1000 --dataset_path <path-to-imagenet-2012-validation> --cuda_num 0
+
+
+------ Smoothing score variance ------
+
+python3 ImageNetSmoothingScoreVarianceTest.py --test_type RISE --model VIT32 --image_count 1000 --dataset_path <path-to-imagenet-2012-validation> --cuda_num 0
+python3 ImageNetSmoothingScoreVarianceTest.py --test_type POS_NEG_PERT --model VIT32 --image_count 1000 --dataset_path <path-to-imagenet-2012-validation> --cuda_num 0
+python3 ImageNetSmoothingScoreVarianceTest.py --test_type MONO --model VIT32 --image_count 1000 --dataset_path <path-to-imagenet-2012-validation> --cuda_num 0
+python3 ImageNetSmoothingScoreVarianceTest.py --test_type AIC --model VIT32 --image_count 1000 --dataset_path <path-to-imagenet-2012-validation> --cuda_num 0
+python3 ImageNetSmoothingScoreVarianceTest.py --test_type DF --model VIT32 --image_count 1000 --dataset_path <path-to-imagenet-2012-validation> --cuda_num 0
+
+
+python3 ImageNetSmoothingScoreVarianceTest.py --test_type RISE --model VIT16 --image_count 1000 --dataset_path <path-to-imagenet-2012-validation> --cuda_num 0
+python3 ImageNetSmoothingScoreVarianceTest.py --test_type POS_NEG_PERT --model VIT16 --image_count 1000 --dataset_path <path-to-imagenet-2012-validation> --cuda_num 0
+python3 ImageNetSmoothingScoreVarianceTest.py --test_type MONO --model VIT16 --image_count 1000 --dataset_path <path-to-imagenet-2012-validation> --cuda_num 0
+python3 ImageNetSmoothingScoreVarianceTest.py --test_type AIC --model VIT16 --image_count 1000 --dataset_path <path-to-imagenet-2012-validation> --cuda_num 0
+python3 ImageNetSmoothingScoreVarianceTest.py --test_type DF --model VIT16 --image_count 1000 --dataset_path <path-to-imagenet-2012-validation> --cuda_num 0
+
+
+------ Consistency and agreement ------
+
+
+python3 ImageNetConsistencyTest.py --test_type RISE --model VIT32 --image_count 5000 --dataset_path <path-to-imagenet-2012-validation> --cuda_num 0
+python3 ImageNetConsistencyTest.py --test_type AIC --model VIT32 --image_count 5000 --dataset_path <path-to-imagenet-2012-validation> --cuda_num 0
+python3 ImageNetConsistencyTest.py --test_type DF --model VIT32 --image_count 5000 --dataset_path <path-to-imagenet-2012-validation> --cuda_num 0
+python3 ImageNetConsistencyTest.py --test_type POS_NEG_PERT --model VIT32 --image_count 5000 --dataset_path <path-to-imagenet-2012-validation> --cuda_num 0
+python3 ImageNetConsistencyTest.py --test_type MONO --model VIT32 --image_count 5000 --dataset_path <path-to-imagenet-2012-validation> --cuda_num 0
+
+python3 ImageNetConsistencyTest.py --test_type RISE_VIT --model VIT32 --image_count 5000 --dataset_path <path-to-imagenet-2012-validation> --cuda_num 0
+python3 ImageNetConsistencyTest.py --test_type AIC_VIT --model VIT32 --image_count 5000 --dataset_path <path-to-imagenet-2012-validation> --cuda_num 0
+python3 ImageNetConsistencyTest.py --test_type DF_VIT --model VIT32 --image_count 5000 --dataset_path <path-to-imagenet-2012-validation> --cuda_num 0
+python3 ImageNetConsistencyTest.py --test_type POS_NEG_PERT_VIT --model VIT32 --image_count 5000 --dataset_path <path-to-imagenet-2012-validation> --cuda_num 0
+python3 ImageNetConsistencyTest.py --test_type MONO_VIT --model VIT32 --image_count 5000 --dataset_path <path-to-imagenet-2012-validation> --cuda_num 0
+
+
+
+python3 ImageNetConsistencyTest.py --test_type RISE --model VIT16 --image_count 5000 --dataset_path <path-to-imagenet-2012-validation> --cuda_num 0
+python3 ImageNetConsistencyTest.py --test_type AIC --model VIT16 --image_count 5000 --dataset_path <path-to-imagenet-2012-validation> --cuda_num 0
+python3 ImageNetConsistencyTest.py --test_type DF --model VIT16 --image_count 5000 --dataset_path <path-to-imagenet-2012-validation> --cuda_num 0
+python3 ImageNetConsistencyTest.py --test_type POS_NEG_PERT --model VIT16 --image_count 5000 --dataset_path <path-to-imagenet-2012-validation> --cuda_num 0
+python3 ImageNetConsistencyTest.py --test_type MONO --model VIT16 --image_count 5000 --dataset_path <path-to-imagenet-2012-validation> --cuda_num 0
+
+python3 ImageNetConsistencyTest.py --test_type RISE_VIT --model VIT16 --image_count 5000 --dataset_path <path-to-imagenet-2012-validation> --cuda_num 0
+python3 ImageNetConsistencyTest.py --test_type AIC_VIT --model VIT16 --image_count 5000 --dataset_path <path-to-imagenet-2012-validation> --cuda_num 0
+python3 ImageNetConsistencyTest.py --test_type DF_VIT --model VIT16 --image_count 5000 --dataset_path <path-to-imagenet-2012-validation> --cuda_num 0
+python3 ImageNetConsistencyTest.py --test_type POS_NEG_PERT_VIT --model VIT16 --image_count 5000 --dataset_path <path-to-imagenet-2012-validation> --cuda_num 0
+python3 ImageNetConsistencyTest.py --test_type MONO_VIT --model VIT16 --image_count 5000 --dataset_path <path-to-imagenet-2012-validation> --cuda_num 0
+
+
+
+python3 ImageNetConsistencyTest.py --test_type RISE --model VIT8 --image_count 1000 --dataset_path <path-to-imagenet-2012-validation> --cuda_num 0
+python3 ImageNetConsistencyTest.py --test_type AIC --model VIT8 --image_count 1000 --dataset_path <path-to-imagenet-2012-validation> --cuda_num 0
+python3 ImageNetConsistencyTest.py --test_type DF --model VIT8 --image_count 1000 --dataset_path <path-to-imagenet-2012-validation> --cuda_num 0
+python3 ImageNetConsistencyTest.py --test_type POS_NEG_PERT --model VIT8 --image_count 1000 --dataset_path <path-to-imagenet-2012-validation> --cuda_num 0
+python3 ImageNetConsistencyTest.py --test_type MONO --model VIT8 --image_count 1000 --dataset_path <path-to-imagenet-2012-validation> --cuda_num 0
+
+python3 ImageNetConsistencyTest.py --test_type RISE_VIT --model VIT8 --image_count 1000 --dataset_path <path-to-imagenet-2012-validation> --cuda_num 0
+python3 ImageNetConsistencyTest.py --test_type AIC_VIT --model VIT8 --image_count 1000 --dataset_path <path-to-imagenet-2012-validation> --cuda_num 0
+python3 ImageNetConsistencyTest.py --test_type DF_VIT --model VIT8 --image_count 1000 --dataset_path <path-to-imagenet-2012-validation> --cuda_num 0
+python3 ImageNetConsistencyTest.py --test_type POS_NEG_PERT_VIT --model VIT8 --image_count 1000 --dataset_path <path-to-imagenet-2012-validation> --cuda_num 0
+python3 ImageNetConsistencyTest.py --test_type MONO_VIT --model VIT8 --image_count 1000 --dataset_path <path-to-imagenet-2012-validation> --cuda_num 0
+
+------ Entropy ------
+
+python3 ImageNetEntropyTest.py --test_type RISE --model VIT32 --image_count 5000 --dataset_path <path-to-imagenet-2012-validation> --cuda_num 0
+python3 ImageNetEntropyTest.py --test_type RISE_VIT --model VIT32 --image_count 5000 --dataset_path <path-to-imagenet-2012-validation> --cuda_num 0
+
+python3 ImageNetEntropyTest.py --test_type RISE --model VIT16 --image_count 5000 --dataset_path <path-to-imagenet-2012-validation> --cuda_num 0
+python3 ImageNetEntropyTest.py --test_type RISE_VIT --model VIT16 --image_count 5000 --dataset_path <path-to-imagenet-2012-validation> --cuda_num 0
+
+python3 ImageNetEntropyTest.py --test_type RISE --model VIT8 --image_count 5000 --dataset_path <path-to-imagenet-2012-validation> --cuda_num 0
+python3 ImageNetEntropyTest.py --test_type RISE_VIT --model VIT8 --image_count 5000 --dataset_path <path-to-imagenet-2012-validation> --cuda_num 0
+
+
+
+------ Embedding Tests ------
+
+python3 ImageNetValEmbeddingDistance.py --image_count 1000 --model VIT32 --test_type RISE --dataset_path <path-to-imagenet-2012-validation> --cuda_num 0
+python3 ImageNetValEmbeddingDistance.py --image_count 1000 --model VIT32 --test_type RISE_VIT --dataset_path <path-to-imagenet-2012-validation> --cuda_num 0
+
+python3 ImageNetValEmbeddingDistance.py --image_count 1000 --model VIT16 --test_type RISE --dataset_path <path-to-imagenet-2012-validation> --cuda_num 0
+python3 ImageNetValEmbeddingDistance.py --image_count 1000 --model VIT16 --test_type RISE_VIT --dataset_path <path-to-imagenet-2012-validation> --cuda_num 0
+
+------- Order Images -------
+
+python3 baselineOrderComp.py --image_count 1000 --model VIT32 --dataset_path <path-to-imagenet-2012-validation> --cuda_num 0
+python3 baselineOrderComp.py --image_count 1000 --model VIT16 --dataset_path <path-to-imagenet-2012-validation> --cuda_num 0
+
+---------- equivalence tests ---------
+
+python3 speedAndEquivalenceTest.py --image_count 1000 --model VIT32 --dataset_path <path-to-imagenet-2012-validation> --cuda_num 0
+python3 speedAndEquivalenceTest.py --image_count 1000 --model VIT16 --dataset_path <path-to-imagenet-2012-validation> --cuda_num 0
