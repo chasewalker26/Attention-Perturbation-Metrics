@@ -248,3 +248,38 @@ class Baselines:
             return (attr[:, 1:, 1:].mean(axis=1) + attr[:, 0, 1:])
         else:
             return attr[:, 0, 1:].reshape(-1, patches_per_side, patches_per_side), R[:, 0, 1:].reshape(-1, patches_per_side, patches_per_side)
+        
+
+
+
+        # https://github.com/XianrenYty/Transition_Attention_Maps
+    def IG(self, input, target_class, steps = 50, device = "cuda:0"):
+        input.requires_grad = True
+        output = self.model(input.to(device), register_hook = True)
+        score = output[0][target_class].sum()
+        score.backward()
+
+        b, h, s, _ = self.model.blocks[-1].attn.get_attention_map().shape
+
+        total_gradients = torch.zeros(b, h, s, s).to(device)
+        for alpha in np.linspace(0, 1, steps):        
+            # forward propagation
+            data_scaled = input * alpha
+
+            # backprop
+            output = self.model(data_scaled, register_hook = True)
+            score = output[0][target_class].sum()
+            score.backward()
+
+            # call grad
+            gradients = self.model.blocks[-1].attn.get_attn_gradients()
+            total_gradients += gradients
+
+        W_state = (total_gradients / steps).clamp(min=0).mean(1)[:, 0, :].reshape(b, 1, s)
+                
+        input.requires_grad = False
+        
+        patches_per_side = int(np.sqrt(s - 1))
+
+        return  W_state[:, 0, 1:].reshape(-1, patches_per_side, patches_per_side)
+    
