@@ -2,7 +2,7 @@
 The official implementation of "Rethinking Attribution Quality Metrics for Vision Transformers".
 
 ## How to Use APMs
-See `example.ipynb` for a full example of the application of the source code for our APMs compared with their IPM counterparts.
+See `APM/example.ipynb` for a full example of the application of the source code for our APMs compared with their IPM counterparts.
 
 It shows:
 <ul>
